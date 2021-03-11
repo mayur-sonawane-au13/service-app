@@ -21,7 +21,7 @@ connection.once('open', () => {
 
 // Define Port or run Express;
 const app = express();
-const Port = 8500;
+const Port = process.env.PORT || 8500;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
